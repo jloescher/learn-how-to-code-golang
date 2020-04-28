@@ -43,6 +43,7 @@ func (u user) Introduction() {
 }
 
 func (u user) Says() {
+	sort.Strings(u.Sayings)
 	for _, saying := range u.Sayings {
 		fmt.Printf("\t\t%v\n", saying)
 	}
